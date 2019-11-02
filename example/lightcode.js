@@ -2,7 +2,7 @@ const CSGOGSI = require("../index"); // const CSGOGSI = require("node-csgo-gsi")
 //const player = require('play-sound')();
 //var plant = new Audio('csbombtimer.wav')
 const Troubadour = require('troubadour');
-const troubadour = new Troubadour('sox');
+const troubadour = new Troubadour('VLC');
 
 let gsi = new CSGOGSI({
     port: 8080,
