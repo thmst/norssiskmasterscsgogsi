@@ -13,6 +13,13 @@ let gsi = new CSGOGSI({
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
     pommi = true;
+        while(pommi) {
+            output.send('noteon', {
+            velocity: 127,
+            note: 1,
+            channel: 1
+        });
+}
     }
 );
 
@@ -35,11 +42,3 @@ gsi.on("roundWinTeam", function (data) {
         pommi = false;
     }
 });
-
-while(pommi) {
-    output.send('noteon', {
-    velocity: 127,
-    note: 1,
-    channel: 1
-  });
-}
