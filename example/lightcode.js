@@ -1,6 +1,8 @@
 const CSGOGSI = require("../index"); // const CSGOGSI = require("node-csgo-gsi");
 //const player = require('play-sound')();
-var plant = new Audio('csbombtimer.wav')
+//var plant = new Audio('csbombtimer.wav')
+const Troubadour = require('troubadour');
+const troubadour = new Troubadour('sox');
 
 let gsi = new CSGOGSI({
     port: 8080,
@@ -9,7 +11,8 @@ let gsi = new CSGOGSI({
 
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
-    plant.play()
+    troubadour.play('~/csbombtimer.wav');
+    //plant.play()
     /*player.play('./csbombtimer.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });*/
@@ -18,7 +21,10 @@ gsi.on("bombTimeStart", function () {
 gsi.on("bombState", function (data) {
     if (data === "defused") {
         console.log("defused");
-        plant.stop
+    
+        troubadour.stop();
+        //plant.stop
+        
     }
 });
 
