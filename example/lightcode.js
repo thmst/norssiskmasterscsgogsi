@@ -8,7 +8,7 @@ let gsi = new CSGOGSI({
 
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
-    player.play('./csbombtimer.wav', (err) => {
+    player.play('./csbombtimer2.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });
 });
