@@ -13,7 +13,7 @@ let gsi = new CSGOGSI({
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
     //pommi = true;
-        for(var i = 0; i < 10; i++) {
+        for(var i = 0; i < 3; i++) {
             output.send('noteon', {
             velocity: 127,
             note: 1,
