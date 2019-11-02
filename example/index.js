@@ -13,6 +13,7 @@ let gsi = new CSGOGSI({
 });
 
 var pommi = false;
+var purku = false;
 
 
 gsi.on("bombTimeStart", function () {
