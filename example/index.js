@@ -2,7 +2,7 @@ const CSGOGSI = require("../index"); // const CSGOGSI = require("node-csgo-gsi")
 var easymidi = require('easymidi');
 var output = new easymidi.Output('CS', true);
 
-var pommi = false;
+//var pommi = false;
 
 let gsi = new CSGOGSI({
     port: 8080,
@@ -12,8 +12,8 @@ let gsi = new CSGOGSI({
 
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
-    pommi = true;
-        while(pommi) {
+    //pommi = true;
+        for(var i = 0; i < 10; i++) {
             output.send('noteon', {
             velocity: 127,
             note: 1,
