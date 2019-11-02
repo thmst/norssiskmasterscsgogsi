@@ -26,7 +26,7 @@ gsi.on("bombState", function (data) {
 gsi.on("roundWinTeam", function (data) {
     if (data === "CT") {
         console.log("CT win");
-        player.play('./160Hz R.wav', (err) => {
+        player.play('./1000Hz R.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
     }
@@ -35,7 +35,7 @@ gsi.on("roundWinTeam", function (data) {
 gsi.on("roundWinTeam", function (data) {
     if (data === "T") {
         console.log("T win");
-        player.play('./400Hz L.wav', (err) => {
+        player.play('./2.5kHz L.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
     }
