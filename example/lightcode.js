@@ -8,7 +8,7 @@ let gsi = new CSGOGSI({
 
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
-    player.play('./csbombtimer2.wav', (err) => {
+    player.play('./csbombtimer.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });
 });
@@ -16,8 +16,8 @@ gsi.on("bombTimeStart", function () {
 gsi.on("bombState", function (data) {
     if (data === "defused") {
         console.log("defused");
-        player.stop('./csbombtimer2.wav', (err) => {
-            if (err) console.log(`Could not stop sound: ${err}`);
+        audio.kill(), (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
         });
     }
 });
