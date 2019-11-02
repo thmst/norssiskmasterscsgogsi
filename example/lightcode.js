@@ -11,7 +11,7 @@ let gsi = new CSGOGSI({
 
 gsi.on("bombTimeStart", function () {
     console.log("C4 planted");
-    troubadour.play('~/csbombtimer.wav');
+    troubadour.play('~/csbombtimer2.wav');
     //plant.play()
     /*player.play('./csbombtimer.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
@@ -21,7 +21,6 @@ gsi.on("bombTimeStart", function () {
 gsi.on("bombState", function (data) {
     if (data === "defused") {
         console.log("defused");
-    
         troubadour.stop();
         //plant.stop
         
