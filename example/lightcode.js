@@ -17,7 +17,7 @@ gsi.on("bombState", function (data) {
     if (data === "defused") {
         console.log("defused");
         player.stop('./csbombtimer2.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
+            if (err) console.log(`Could not stop sound: ${err}`);
         });
     }
 });
